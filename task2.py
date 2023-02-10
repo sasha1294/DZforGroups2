@@ -21,4 +21,17 @@
 
 # Start resolving! Good luck!
 def sum_of_integers_in_string(s):
-    return#what the function name says
+    number = []
+    sum = 0
+    for i in s:
+        if i.isdigit():
+            if not number or last_isalpha:
+                number.append(i)
+            else:
+                number[-1] += i
+        last_isalpha = i.isalpha()
+    for i in number:
+        sum += int(i)
+    print(number)
+    return sum
+print(sum_of_integers_in_string("12.4"))
